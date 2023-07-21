@@ -1,0 +1,47 @@
+$color-main: #ffffff;
+$color-secondary: rgba(243, 247, 250, 1);
+$color-decorative: rgba(33, 150, 243, 1);
+$color-decorative--muted: rgba(223, 229, 236, 1);
+$color-hover: rgba(241, 252, 255, 1);
+
+$shadow: 0px 0px 15px 0px rgba(75, 82, 88, 0.2);
+
+$font-family: 'Open Sans', Arial, sans-serif;
+
+$screen-md: 768px;
+
+.tikets {
+  width: 502px;
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: $screen-md) {
+    width: 100%;
+  }
+}
+
+.show-more {
+  height: 50px;
+  background-color: $color-decorative;
+  border-radius: 7px;
+  border: none;
+
+  font-family: $font-family;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+  color: $color-main;
+
+  &:hover {
+    border: 2px solid $color-decorative--muted;
+    background-color: $color-hover;
+    color: $color-decorative;
+  }
+
+  &:focus,
+  :active {
+    background-color: $color-decorative;
+    color: $color-main;
+  }
+}

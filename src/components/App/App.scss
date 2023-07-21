@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap');
+
+$color-main: #ffffff;
+$color-secondary: rgba(243, 247, 250, 1);
+
+$screen-md: 768px;
+
+html {
+  box-sizing: border-box;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+
+  &::before,
+  ::after {
+    box-sizing: inherit;
+  }
+}
+
+body {
+  min-height: 100%;
+}
+
+.avia-app {
+  min-height: 100%;
+  max-width: 900px;
+  background-color: $color-secondary;
+  margin: 0 auto;
+
+  &__img {
+    display: block;
+    margin: 0 auto;
+    padding-top: 30px;
+
+    @media (max-width: $screen-md) {
+      padding-top: 15px;
+    }
+  }
+}
+
+.main {
+  padding: 30px 80px;
+  display: flex;
+
+  @media (max-width: $screen-md) {
+    padding: 15px;
+    flex-direction: column;
+  }
+}
