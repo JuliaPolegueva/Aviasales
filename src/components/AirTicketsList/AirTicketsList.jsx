@@ -23,8 +23,6 @@ function AirTicketsList() {
 
   const dispatch = useDispatch();
 
-  //Добавить функцию генерации key
-
   const renderTickets = arr => {
     return arr.slice(0, renderedTickets).map((ticket, ind) => {
       return <AirTicket key={ind} {...ticket} />;

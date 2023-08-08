@@ -1,9 +1,9 @@
-export const filterByTransfer = (ticket, transferFilters /*объект */, filterAll /*bool */) => {
+export const filterByTransfer = (ticket, transferFilters, filterAll) => {
   if (!filterAll) {
-    const stops = ticket.segments.map(el => el.stops.length).reduce((previous, current) => previous + current, 0); // 3
+    const stops = ticket.segments.map(el => el.stops.length);
 
     const filter = Object.entries(transferFilters).filter(([key, value]) => {
-      return stops === +key && value;
+      return stops.includes(+key) && value;
     });
 
     return filter.length > 0 ? true : false;

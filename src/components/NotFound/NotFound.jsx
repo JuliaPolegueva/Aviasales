@@ -8,7 +8,7 @@ const NotFound = () => {
   return (
     <div className={classes.found}>
       <img className={classes['found-img']} src={notFound} alt="Нет результатов" />
-      <span className={classes['found-txt']}>Не найдено рейсов по заданным условиям.</span>
+      <span className={classes['found-txt']}>Нет рейсов, подходящих под заданные фильтры.</span>
     </div>
   );
 };
