@@ -1,0 +1,27 @@
+$color-main: #ffffff;
+$shadow: 0px 0px 15px 0px rgba(75, 82, 88, 0.2);
+$font-family: 'Open Sans', Arial, sans-serif;
+$screen-md: 768px;
+
+.found {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  padding: 20px;
+  background-color: $color-main;
+  border-radius: 7px;
+  box-shadow: $shadow;
+}
+
+.found-img {
+  height: 60px;
+  margin-right: 20px;
+}
+
+.found-txt {
+  font-family: $font-family;
+  font-weight: 600;
+  font-size: 16px;
+  color: rgb(74, 71, 71);
+}

@@ -11,7 +11,6 @@ $font-family: 'Open Sans', Arial, sans-serif;
 $screen-md: 768px;
 
 .tiket {
-  max-width: 502px;
   height: 184px;
   background-color: $color-main;
   border-radius: 7px;
@@ -20,8 +19,8 @@ $screen-md: 768px;
   margin-bottom: 15px;
 
   @media (max-width: $screen-md) {
+    width: 100%;
     padding: 15px;
-    height: auto;
   }
 
   &__header {
@@ -60,7 +59,8 @@ $screen-md: 768px;
   align-items: flex-start;
 
   &:last-child {
-    margin-right: 50px;
+    align-items: flex-end;
+    margin-right: 30px;
 
     @media (max-width: $screen-md) {
       margin-right: 0;
