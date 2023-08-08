@@ -8,7 +8,7 @@ import { fetchSearchId, fetchTickets } from '../../store/tickets/tickets.actions
 
 import './App.scss';
 
-function App() {
+const App = () => {
   const searchId = useSelector(state => state.tickets.searchId);
   const stop = useSelector(state => state.tickets.stop);
   const statusFetch500 = useSelector(state => state.tickets.statusFetch500);
@@ -35,6 +35,6 @@ function App() {
       </main>
     </div>
   );
-}
+};
 
 export default App;

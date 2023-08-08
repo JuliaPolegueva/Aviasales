@@ -6,7 +6,7 @@ import { wordDeclension } from '../../utils/wordDeclension';
 
 import classes from './AirTicket.module.scss';
 
-function AirTicket({ price, carrier, segments }) {
+const AirTicket = ({ price, carrier, segments }) => {
   const transferWordsArr = ['ПЕРЕСАДКА', 'ПЕРЕСАДКИ', 'ПЕРЕСАДОК'];
   const priceFormat = price.toLocaleString();
 
@@ -44,7 +44,7 @@ function AirTicket({ price, carrier, segments }) {
       })}
     </div>
   );
-}
+};
 
 export default AirTicket;
 

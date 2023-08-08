@@ -11,7 +11,7 @@ import NotFound from '../NotFound/NotFound';
 
 import classes from './AirTicketsList.module.scss';
 
-function AirTicketsList() {
+const AirTicketsList = () => {
   const ticketsList = useSelector(state => state.tickets.tickets);
   const renderedTickets = useSelector(state => state.tickets.renderedTickets);
 
@@ -23,13 +23,13 @@ function AirTicketsList() {
 
   const dispatch = useDispatch();
 
-  const renderTickets = arr => {
-    return arr.slice(0, renderedTickets).map((ticket, ind) => {
-      return <AirTicket key={ind} {...ticket} />;
+  const renderTickets = ticketsArr => {
+    return ticketsArr.slice(0, renderedTickets).map((ticket, index) => {
+      return <AirTicket key={index} {...ticket} />;
     });
   };
 
-  const filterTickets = ticketsList.filter(item => filterByTransfer(item, transferFilters, filterAll));
+  const filterTickets = ticketsList.filter(ticket => filterByTransfer(ticket, transferFilters, filterAll));
 
   const tickets = filterTickets && !isError ? renderTickets(filterTickets) : null;
   const spinner = isLoading ? <Spinner /> : null;
@@ -49,6 +49,6 @@ function AirTicketsList() {
       )}
     </div>
   );
-}
+};
 
 export default AirTicketsList;

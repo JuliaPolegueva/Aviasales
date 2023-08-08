@@ -6,7 +6,7 @@ import { checkFilter } from '../../store/transfer/transfer.slice';
 
 import classes from './TransferFilter.module.scss';
 
-function TransferFilter() {
+const TransferFilter = () => {
   const dispatch = useDispatch();
 
   const check = useSelector(state => state.transfer);
@@ -23,13 +23,13 @@ function TransferFilter() {
     { label: '3 пересадки', name: '3' },
   ];
 
-  const filterNames = filterListNames.reduce((acc, el) => {
-    acc.push(el.name);
-    return acc;
+  const filterNames = filterListNames.reduce((arrNames, filter) => {
+    arrNames.push(filter.name);
+    return arrNames;
   }, []);
 
-  const renderTransfers = arr => {
-    return arr.map(({ label, name }) => {
+  const renderTransfers = filters => {
+    return filters.map(({ label, name }) => {
       return (
         <TransferItem
           key={label}
@@ -51,6 +51,6 @@ function TransferFilter() {
       <form className={classes.filters}>{items}</form>
     </div>
   );
-}
+};
 
 export default TransferFilter;
